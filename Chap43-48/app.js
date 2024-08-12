@@ -7,18 +7,21 @@ function deleteRow() {
     // FOR LINE ONE 
     // var table0 = document.getElementById("zero0").style.display="none"
     // var table1 = document.getElementById("one3").style.display="none"
-    document.getElementById("zero").innerHTML = ''
-    document.getElementById("one").innerHTML = ''
-    document.getElementById("two").innerHTML = ''
-    document.getElementById("three").innerHTML = ''
+    document.getElementsByTagName("tr").innerHTML = ''
+    
 
 }
 
 // 5.
 var counter = 0
-function increase() {
-    var incr = document.getElementById("counter").innerHTML=counter++
+function increase(){
+    counter++
+    var incr = document.getElementById("counter").innerHTML=counter
+    incr=document.getElementById("increase").style.backgroundColor="pink"
 }
 function decrease(){
-    var decr = document.getElementById("counter").innerHTML=counter--
+    counter--
+    var decr = document.getElementById("counter").innerHTML=counter
+    incr=document.getElementById("decrease").style.backgroundColor="purple"
+
 }

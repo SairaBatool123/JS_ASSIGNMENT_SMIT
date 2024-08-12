@@ -36,30 +36,30 @@
             <th>NAME</th>
             <th>CLASS</th>
         </tr>
-        <tr id="zero" onclick="deleteRow()">
+        <tr>
             <td>0</td>
             <td>Jhone</td>
             <td>10</td>
-            <td><button>Delete</button></td>
+            <td><button onclick="deleteRow('this')">Delete</button></td>
 
         </tr>
-        <tr id="one" onclick="deleteRow()">
+        <tr>
             <td>1</td>
             <td>Doe</td>
             <td>9</td>
-            <td><button>Delete</button></td>
+            <td><button onclick="deleteRow('this')">Delete</button></td>
         </tr>
-        <tr id="two" onclick="deleteRow()">
+        <tr>
             <td>2</td>
             <td>Mark</td>
             <td>10</td>
-            <td><button>Delete</button></td>
+            <td><button onclick="deleteRow()">Delete</button></td>
         </tr>
-        <tr id="three" onclick="deleteRow()">
+        <tr>
             <td>3</td>
             <td>James</td>
             <td>8</td>
-            <td><button>Delete</button></td>
+            <td><button onclick="deleteRow()">Delete</button></td>
         </tr>
     </table>
 
@@ -71,8 +71,9 @@
 <br><br>
     <!-- 5 -->
 
-     <p>COUNT DOWN<h3 id="counter"></h3></p>
+     <h3>COUNT DOWN</h3>
     <button id="increase" onclick="increase()">INCREASE BUTTON</button>
+    <span id="counter">0</span>
     <button id="decrease" onclick="decrease()">DECREASE BUTTON</button>
 
     <script src="app.js"></script>
