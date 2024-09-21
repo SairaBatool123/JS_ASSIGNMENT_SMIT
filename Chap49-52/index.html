@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!------------------ Q#1  --------------->
+    <!-- 1. Create a signup form and display form data in your web
+    page on submission. -->
+
+    <h1>Signup Form</h1>
+    <form id="signupForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="displayData" class = "hidden">
+        <form class="form">
+        <h1>Form Data</h1>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Password:</strong> <span id="displayPassword"></span></p>
+    </form>
+    </div>
+
+    <!-----------------------Q#2  --------- ------->
+    <!-- 2. Suppose in your webpage there is content area in which
+    you have entered your item details, but user can only see
+    some details on first look. When user clicks on “Read
+    more” button, full detail of that particular item will be
+    displayed. -->
+
+    <img src="https://th.bing.com/th/id/OIP.7oVmo1QLA8uNYns-EQugxAHaEo?w=260&h=180&c=7&r=0&o=5&pid=1.7" height="250px">
+    <p id="shortDescription">Daffodils are one of nature's most enchanting flowers, symbolizing renewal and the arrival
+        of spring. These perennial bulbs are renowned for their vibrant yellow, white, or occasionally orange blooms
+        that resemble a trumpet set against a star-shaped backdrop of petals. Native to Europe, particularly the
+        Mediterranean region, daffodils have been cherished for centuries and are often associated with new beginnings,
+        making them a popular choice for gardens and floral
+        arrangements alike.</p>
+
+    <p id="fullDescription">
+
+        The scientific name for the daffodil is Narcissus, a name derived from Greek mythology, where it is linked to
+        the story of Narcissus, a youth who fell in love with his reflection. This tale reflects the flower's inherent
+        beauty and the allure it has held throughout history.
+
+        Daffodils are hardy flowers, capable of thriving in a variety of climates and soils, which adds to their
+        popularity among gardeners. They are also easy to care for, requiring minimal maintenance once planted. Beyond
+        their visual appeal, daffodils are celebrated for their subtle, sweet fragrance, which can fill the air with a
+        sense of freshness and vitality. As harbingers of spring, daffodils represent hope, joy, and the enduring beauty
+        of nature.</p>
+    <button id="readMoreButton">Read More</button>
+
+
+    <!-------------------------Q#3-------------------------------->
+    <!-- 3. In previous assignment you have created a tabular data
+    using javascript. Let’s modify that. Create a form which
+    takes student’s details and show each student detail in
+    table. Each row of table must contain a delete button and
+    an edit button. On click on delete button entire row should
+    be deleted. On click on edit button, a hidden form will
+    appear with the values of that row. -->
+
+
+    <!-- In Other REpository -->
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
