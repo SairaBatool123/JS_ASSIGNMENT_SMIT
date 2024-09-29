@@ -5,10 +5,10 @@ var count = 0;
 
 var timer = false;
 
-function watchAction() {
+function stopWatch() {
     if (timer == true) {
         count++
-        setTimeout(watchAction, 10)
+        setTimeout(stopWatch, 10)
         document.getElementById('count').innerHTML = count
 
         if (count == 100) {
@@ -22,8 +22,6 @@ function watchAction() {
             sec = 0
         }
         if (min == 60) {
-            console.log('han');
-
             hr++
             document.getElementById('hr').innerHTML = hr
             min = 0
@@ -32,9 +30,9 @@ function watchAction() {
         //     document.getElementById('sec').innerHTML = "0" + count
         // }
         if (hr < 10) {
-            document.getElementById('sec').innerHTML = "0" + hr
+            document.getElementById('hr').innerHTML = "0" + hr
         } if (min < 10) {
-            document.getElementById('sec').innerHTML = "0" + min
+            document.getElementById('min').innerHTML = "0" + min
         } if (sec < 10) {
             document.getElementById('sec').innerHTML = "0" + sec
         }
@@ -43,7 +41,7 @@ function watchAction() {
 
 function start() {
     timer = true;
-    watchAction();
+    stopWatch();
 }
 function stop() {
     timer = false;
@@ -63,5 +61,5 @@ function restart() {
     document.getElementById('min').innerHTML = "00"
     document.getElementById('sec').innerHTML = "00"
     document.getElementById('count').innerHTML = "00"
-    watchAction();
+    stopWatch();
 }
