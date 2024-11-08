@@ -1,6 +1,8 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
   import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword , onAuthStateChanged , signOut ,sendEmailVerification} from
 "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { getFirestore , collection, addDoc , getDocs , doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
 
 
 const firebaseConfig = {
@@ -15,4 +17,6 @@ const firebaseConfig = {
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-  export {auth, createUserWithEmailAndPassword , signInWithEmailAndPassword , onAuthStateChanged , signOut ,sendEmailVerification }
+  const db = getFirestore(app);
+
+  export {auth, createUserWithEmailAndPassword , signInWithEmailAndPassword , onAuthStateChanged , signOut ,sendEmailVerification , getFirestore , db , collection, addDoc , getDocs , doc, setDoc}
