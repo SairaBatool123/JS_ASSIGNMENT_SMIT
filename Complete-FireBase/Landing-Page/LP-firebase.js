@@ -11,7 +11,7 @@ closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
 
 
 // -------------------------------  With the help of firebase sigout ---------------------------------------------
-import {auth, signOut} from "./signout-firebase.js"
+import {auth, signOut} from "../Form/firebase.js"
 
 let SignOut1 = ()=>{
   signOut(auth).then(() => {
