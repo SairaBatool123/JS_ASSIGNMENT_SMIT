@@ -11,7 +11,7 @@ import {
   addDoc,
   getDocs,
   doc,
-  setDoc, updateDoc 
+  setDoc,
 } from "./firebase.js";
 
 // ------- onAuthStateChanged (listener) Account Already exit Or LogIn in Broswer (1. application 2. index db delete db that are temporary data after that you are able to see "user not exist") --------

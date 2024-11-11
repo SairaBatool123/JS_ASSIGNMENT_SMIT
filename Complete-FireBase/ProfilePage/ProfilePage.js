@@ -8,10 +8,8 @@ document.getElementById('fileInput').onchange = function(event) {
 };
 
 
-
-
 // ----------------------------  UPDATE DOC ------------------------------------
-import {updateDoc , doc , db , auth} from "../Form/firebase.js"
+import {updateDoc , doc , db , auth , deleteDoc} from "../Form/firebase.js"
 
 let updateProfile=async()=>{
   let name = document.getElementById("name").value;
@@ -31,3 +29,13 @@ console.log(name,email,password);
 }
 let update = document.getElementById("update");
 update.addEventListener("click", updateProfile);
+
+// ----------------------------  DELETE ACCOUNT ------------------------------------
+
+let deleteAccount=async()=>{
+  let id = auth.currentUser.uid
+  console.log(id);
+  await deleteDoc(doc(db, "users", id));
+  console.log("Account Deleted");
+}
+let delete_btn = document.getElementById("delete_btn")
