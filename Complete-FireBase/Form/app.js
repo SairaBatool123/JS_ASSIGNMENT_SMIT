@@ -34,6 +34,7 @@ onAuthStateChanged(auth, (user) => {
 let signUp = () => {
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
+  // not showing a password in firebase broswer (illegal)
   let password = document.getElementById("password").value;
   let userObj = { name, email };
   // console.log(userObj);
@@ -101,6 +102,8 @@ let signin = document.getElementById("signin");
 signin.addEventListener("click", signIn);
 
 // ---------------------- SIGN OUT (We already did it in Landing Page Refer That) -------------------------
+
+// ---------------------- EMAIL VERIFICATION -------------------------
 
 let verify = () => {
   // if(user){ 

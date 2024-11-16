@@ -18,7 +18,7 @@ let updateProfile=async()=>{
 console.log(name,email,password);
 
 
-  const userRef = doc(db, "user", auth.currentUser.uid);
+  const userRef = doc(db, "users", auth.currentUser.uid);
   await updateDoc(userRef, {
     name: name.value,
     email: email.value,
